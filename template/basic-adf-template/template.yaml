@@ -67,7 +67,8 @@ spec:
       name: Publish
       action: publish:gitlab
       input:
-        allowedHosts: ['gitlab.elocloud.ninja']
+#        allowedHosts: ['gitlab.elocloud.ninja']
+        allowedHosts: ['github.com']        
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
 
