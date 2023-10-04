@@ -47,7 +47,7 @@ spec:
           ui:options:
             allowedHosts:
               - gitlab.elocloud.ninja
-
+              - github.com
   # This template is meant to be used on top of an existing template.
   # By adding the following and fetching from an absolute URL you can
   # add in the docs template
@@ -65,9 +65,10 @@ spec:
 
     - id: publish
       name: Publish
-      action: publish:gitlab
+      action: publish:github
       input:
-        allowedHosts: ['gitlab.elocloud.ninja']
+#        allowedHosts: ['gitlab.elocloud.ninja']
+        allowedHosts: ['github.com']        
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
 
