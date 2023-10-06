@@ -22,22 +22,38 @@ spec:
         name:
           title: Name
           type: string
-          description: Unique name of the component
+          description: Data Factory Name
           ui:field: EntityNamePicker
           ui:autofocus: true
         description:
           title: Description
           type: string
-          description: A description for the component
+          description: A Data Factory description
         owner:
           title: Owner
           type: string
           description: Owner of the component
-#          ui:field: OwnerPicker
-#          ui:options:
-#            allowedKinds:
-#              - Group
-    - title: Choose a location
+
+    - title: Data Location
+      required:
+        - location
+        - storageAccountName
+        - blobContainerName
+      properties:
+        location:
+          title: Location
+          type: string
+          description: Location of the data factory
+        storageAccountName:
+          title: StorageAccountName
+          type: string
+          description: Name of the Azure storage account that contains the input/output data
+        blobContainerName:
+          title: BlobContainerName
+          type: string
+          description: Name of the blob container in the Azure Storage account
+
+    - title: Choose a Repository location
       required:
         - repoUrl
       properties:
@@ -47,8 +63,7 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
-              - gitlab.elocloud.ninja
-
+              - github.com
   # This template is meant to be used on top of an existing template.
   # By adding the following and fetching from an absolute URL you can
   # add in the docs template
@@ -66,8 +81,9 @@ spec:
 
     - id: publish
       name: Publish
-      action: publish:gitlab
+      action: publish:github
       input:
+#        allowedHosts: ['gitlab.elocloud.ninja']
         allowedHosts: ['github.com']        
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
