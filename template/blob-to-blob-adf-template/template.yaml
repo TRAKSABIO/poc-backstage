@@ -76,8 +76,11 @@ spec:
         values:
           name: ${{ parameters.name }}
           description: ${{ parameters.description }}
-          destination: ${{ parameters.repoUrl | parseRepoUrl }}
           owner: ${{ parameters.owner }}
+          location: ${{ parameters.location }}
+          storageAccountName: ${{ parameters.storageAccountName }}
+          blobContainerName: ${{ parameters.blobContainerName }}          
+          repoUrl: ${{ parameters.repoUrl }}
 
     - id: publish
       name: Publish
