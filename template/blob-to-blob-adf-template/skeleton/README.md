@@ -10,7 +10,7 @@ languages:
 - json
 - bicep
 ---
-# Create a V2 data factory
+# Create ${{values.name | dump}}  Data Factory 
 
 ![Azure Public Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/quickstarts/microsoft.datafactory/data-factory-v2-blob-to-blob-copy/PublicLastTestDate.svg)
 ![Azure Public Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/quickstarts/microsoft.datafactory/data-factory-v2-blob-to-blob-copy/PublicDeployment.svg)
