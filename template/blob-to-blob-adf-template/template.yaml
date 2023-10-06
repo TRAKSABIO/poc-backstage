@@ -2,12 +2,13 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: docs-template
-  title: Documentation Template
-  description: Create a new standalone documentation project
+  title: Template Azure ADF Blob to Blob
+  description: Create a new Template Azure ADF Blob to Blob project
   tags:
-    - recommended
-    - techdocs
-    - mkdocs
+    - ADF
+    - BLOB
+    - Data
+    - ETL
 spec:
   owner: my-awesome-team
   type: documentation
@@ -67,7 +68,6 @@ spec:
       name: Publish
       action: publish:gitlab
       input:
-#        allowedHosts: ['gitlab.elocloud.ninja']
         allowedHosts: ['github.com']        
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
