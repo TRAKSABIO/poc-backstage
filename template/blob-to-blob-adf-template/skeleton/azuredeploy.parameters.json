@@ -3,16 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "dataFactoryName": {
-      "value": "[format('datafactory{0}', uniqueString(resourceGroup().id))]"
+      "value": "${{values.dataFactoryName | dump}}"
     },
     "location": {
-      "value": "[resourceGroup().location]"
+      "value": "${{values.location | dump}}"
     },
     "storageAccountName": {
-      "value": "[format('storage{0}', uniqueString(resourceGroup().id))]"
+      "value": "${{values.storageAccountName | dump}}"
     },
     "blobContainerName": {
-      "value": "[format('blob{0}', uniqueString(resourceGroup().id))]"
+      "value": "${{values.blobContainerName | dump}}"
     }
   }
 }
