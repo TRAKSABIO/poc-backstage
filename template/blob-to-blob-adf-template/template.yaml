@@ -5,10 +5,10 @@ metadata:
   title: Template Azure ADF Blob to Blob
   description: Create a new Template Azure ADF Blob to Blob project
   tags:
-    - ADF
-    - BLOB
-    - Data
-    - ETL
+    - adf
+    - blob
+    - data
+    - etl
 spec:
   owner: my-awesome-team
   type: documentation
