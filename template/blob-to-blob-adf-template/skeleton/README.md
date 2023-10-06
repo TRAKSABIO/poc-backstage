@@ -1,7 +1,8 @@
 ---
-description: This template creates a V2 data factory that copies data from a folder in an Azure Blob Storage to another folder in the storage.
+description: ${{values.description | dump}} 
 page_type: sample
 products:
+
 - azure
 - azure-resource-manager
 urlFragment: data-factory-v2-blob-to-blob-copy
