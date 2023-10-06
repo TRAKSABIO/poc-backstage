@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "dataFactoryName": {
-      "value": "${{values.dataFactoryName | dump}}"
+      "value": ${{values.dataFactoryName | dump}}
     },
     "location": {
       "value": "${{values.location | dump}}"
